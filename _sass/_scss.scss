@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    font-family: "Dancing Script", cursive;
+    &.header {
+        background: url(/_public/_img/main.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 100vh;
+        @media (max-height: 1000px) and (max-width: 700px){
+            display: grid;
+        }
+        div {
+            &.menu {
+                z-index: 999;
+                position: fixed;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                color: #fff;
+                background: rgba($color: #000, $alpha: 0.5);
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 5px;
+                    font-size: 1.5rem;
+                    &.links {
+                        div {
+                            margin: 0 10px;
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &.socials {
+                        div {
+                            margin: 0 10px;
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            &.titulo {
+                position: relative;
+                color: #fff;
+                font-size: 5rem;
+                top: 300px;
+                text-align: center;
+                margin: 0 15px;
+                word-break: break-word;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @media (max-height: 1000px) and (max-width: 700px){
+                    top: 100px;
+                    font-size: 3rem;
+                }
+                div {
+                    &.sepparador {
+                        margin: 30px 5px;
+                    }
+                    &.subtitulo {
+                        font-size: 2rem;
+                    }
+                    &.btn {
+                        margin-top: 200px;
+                        font-size: 2rem;
+                        @media (max-height: 1000px) and (max-width: 700px){
+                            margin-top: 50px;
+                            font-size: 1.5rem;
+                        }
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            background-color: rgba($color: #000000, $alpha: 0.5);
+                            padding: 10px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.about {
+        grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+        margin-top: 50px;
+        div {
+            &.first,
+            &.first-descricao,
+            &.chef,
+            &.chef-info,
+            &.frase {
+                grid-column: 2;
+            }
+            &.second {
+                grid-column: 3;
+                grid-row: 2;
+            }
+            &.first {
+                font-weight: 700;
+                font-size: 2rem;
+                text-align: center;
+                color: saddlebrown;
+            }
+            &.first-descricao {
+                font-size: 1.2rem;
+                margin: 40px 0;
+            }
+            &.chef {
+                font-size: 2rem;
+                font-weight: 700;
+                color: saddlebrown;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            &.chef-info {
+                display: flex;
+                div {
+                    flex: 1;
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:nth-child(odd) {
+                        border: 1px saddlebrown solid;
+                        border-right: none;
+                        border-left: none;
+                        font-size: 1.5rem;
+                        padding: 10px 0;
+                    }
+                    img {
+                        width: 100%;
+                        display: block;
+                        clip-path: circle(40%);
+                    }
+                }
+            }
+            &.frase {
+                div {
+                    text-align: center;
+                    margin-top: 40px;
+                    font-size: 1.5rem;
+                    color: brown;
+                    span {
+                        color: brown;
+                        opacity: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
