@@ -6,7 +6,7 @@
 section {
     font-family: "Dancing Script", cursive;
     transition: all 1s ease-in-out;
-    opacity: 0;
+    opacity: 1;
     &:first-child{
         opacity: 1;
     }
@@ -20,8 +20,8 @@ section {
         div {
             &.menu {
                 z-index: 999;
-                position: fixed;
                 width: 100%;
+                max-height: 30%;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
@@ -180,5 +180,10 @@ section {
                 }
             }
         }
+    }
+    &.flip-book{
+        display: grid;
+        align-items: center;
+        justify-content: center;
     }
 }
